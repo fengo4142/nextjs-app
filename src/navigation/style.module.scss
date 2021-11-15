@@ -1,0 +1,24 @@
+.navbar {
+  font-size: 20.75px;
+
+  ul.socials {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    li {
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+    }
+  }
+  
+  ul:not(.socials) {
+    li {
+      &:not(:last-child) {
+        margin-right: 35px;
+      }
+    }
+  }
+
+}
