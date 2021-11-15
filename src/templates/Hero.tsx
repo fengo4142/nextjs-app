@@ -33,7 +33,7 @@ const Hero = () => (
           </Link>
         }
       />
-      <div className="absolute -bottom-40 right-0">
+      <div className="absolute -bottom-40 right-0 z-50">
         <Image src="/assets/images/circle.svg" width={281} height={281} />
       </div>
     </Section>

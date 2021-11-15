@@ -12,7 +12,7 @@ type ISectionProps = {
 
 const Section = (props: ISectionProps) => {
   const wrapper = className(
-    'relative mx-auto px-3',
+    'relative mx-auto px-4',
     (props.yPadding || 'py-16'),
     (props.partialDark && styles.section),
     styles.customScreen

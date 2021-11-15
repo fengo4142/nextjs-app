@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import styles from './style.module.scss';
 
-type IVerticalFeatureRowProps = {
+type IFeatureRowProps = {
   title: string;
   description: string;
   image: string;
@@ -11,7 +11,7 @@ type IVerticalFeatureRowProps = {
   reverse?: boolean;
 };
 
-const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
+const FeatureRow = (props: IFeatureRowProps) => {
   const verticalFeatureClass = className(
     'mt-20',
     'flex',
@@ -26,16 +26,16 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
 
   return (
     <div className={verticalFeatureClass}>
-      <div className="w-full sm:w-1/2 text-left sm:px-6">
-        <h3 className={`${styles.title} text-6xl font-semibold`}>{props.title}</h3>
-        <div className="mt-6 text-lg leading-7">{props.description}</div>
+      <div className="w-full order-2 lg:w-1/2 lg:order-1 text-left sm:px-6">
+        <h3 className={`${styles.title} text-4xl lg:text-6xl font-semibold`}>{props.title}</h3>
+        <div className="mt-6 text-md lg:text-lg leading-7">{props.description}</div>
       </div>
 
-      <div className="w-full sm:w-1/2 p-6">
+      <div className="w-full order-1 lg:w-1/2 lg:order-2 p-6">
         <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} />
       </div>
     </div>
   );
 };
 
-export { VerticalFeatureRow };
+export { FeatureRow };
