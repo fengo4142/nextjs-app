@@ -26,7 +26,7 @@ const Hero = () => (
         button={
           <Link href="/">
             <a className="inline-block rounded" style={{ backgroundColor: '#D8B243' }}>
-              <div className="text-center uppercase text-black font-bold py-4 px-16">
+              <div className="text-center uppercase text-black font-bold py-2 md:py-4 px-8 md:px-16">
                 Portfolio
               </div>
             </a>

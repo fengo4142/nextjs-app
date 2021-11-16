@@ -1,7 +1,5 @@
 # NextJS Test
 
-Landing page
-
 ### Requirements
 
 - Node.js v14+ and npm

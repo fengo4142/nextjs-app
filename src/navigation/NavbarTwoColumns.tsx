@@ -2,13 +2,20 @@ import React from 'react';
 import Image from 'next/image'
 import Link from 'next/link';
 
+import { HamburgerBtn } from './Hamburger';
 import { AppConfig } from '../utils/AppConfig';
 import styles from './style.module.scss';
 
 const NavbarTwoColumns = () => {
+  
+  const onUpdateToggle = (v: boolean) => {
+    // use global store to mutate - toggling different ui for mobile
+    console.log('toggled', v)
+  }
+
   return (
     <div className="flex flex-wrap justify-between items-center">
-      <div>
+      <div className="flex items-center">
         <Link href="/">
           <a>
             <Image
@@ -37,8 +44,8 @@ const NavbarTwoColumns = () => {
               </Link>
             </li>
           ))}
-          <div className="mb-2 text-lg text-black">
-            <span className="hidden sm:inline-block mx-5 text-gray-500">|</span>
+          <div className="hidden sm:block mb-2 text-lg text-black">
+            <span className="mx-5 text-gray-500">|</span>
             <a className="cursor-pointer text-black">
               Log In
               <span className="ml-3">
@@ -61,6 +68,9 @@ const NavbarTwoColumns = () => {
             </li>
           ))}
         </ul>
+        <div className="block sm:hidden ml-2">
+          <HamburgerBtn isOpened={false} toggled={onUpdateToggle} />
+        </div>
       </nav>
     </div>
   );
