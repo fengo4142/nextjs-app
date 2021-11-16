@@ -1,4 +1,4 @@
-import { Background } from '../background/Background';
+import { Background } from '../components/background/Background';
 import { Section } from '../layout/Section';
 
 const Footer = () => (

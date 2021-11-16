@@ -3,10 +3,10 @@ import Image from 'next/image'
 import Link from 'next/link';
 
 import { HamburgerBtn } from './Hamburger';
-import { AppConfig } from '../utils/AppConfig';
+import { AppConfig } from '../../utils/AppConfig';
 import styles from './style.module.scss';
 
-const NavbarTwoColumns = () => {
+const Navbar = () => {
   
   const onUpdateToggle = (v: boolean) => {
     // use global store to mutate - toggling different ui for mobile
@@ -69,11 +69,11 @@ const NavbarTwoColumns = () => {
           ))}
         </ul>
         <div className="block sm:hidden ml-2">
-          <HamburgerBtn isOpened={false} toggled={onUpdateToggle} />
+          <HamburgerBtn toggled={onUpdateToggle} />
         </div>
       </nav>
     </div>
   );
 }
 
-export { NavbarTwoColumns };
+export { Navbar };

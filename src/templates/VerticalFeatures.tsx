@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { FeatureRow } from '../feature/FeatureRow';
-import { BannerItem } from '../banner/BannerItem';
+import { FeatureRow } from '../components/feature/FeatureRow';
+import { BannerItem } from '../components/banner/BannerItem';
 import { AppConfig } from '../utils/AppConfig';
 import { Section } from '../layout/Section';
 

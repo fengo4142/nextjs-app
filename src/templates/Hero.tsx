@@ -1,16 +1,16 @@
 import Link from 'next/link';
 import Image from 'next/image';
 
-import { Background } from '../background/Background';
-import { HeroOneButton } from '../hero/HeroOneButton';
+import { Background } from '../components/background/Background';
+import { HeroOneButton } from '../components/hero/HeroOneButton';
 import { Section } from '../layout/Section';
-import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
+import { Navbar } from '../components/navigation/Navbar';
 
 const Hero = () => (
   <Background>
     <Background color="bg-white">
       <Section yPadding="py-6">
-        <NavbarTwoColumns />
+        <Navbar />
       </Section>
     </Background>
 

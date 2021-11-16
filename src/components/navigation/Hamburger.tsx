@@ -6,8 +6,9 @@ type IHamburgerBtnProps = {
 };
 
 const HamburgerBtn = (props: IHamburgerBtnProps) => {
+  const base = `h-1 w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
+
   const [isOpen, setIsOpen] = useState(props.isOpened);
-  const genericHamburgerLine = `h-1 w-6 my-1 rounded-full bg-black transition ease transform duration-300`;
   const onToggle = () => {
     setIsOpen(!isOpen);
     props.toggled(!isOpen);
@@ -19,19 +20,19 @@ const HamburgerBtn = (props: IHamburgerBtnProps) => {
       onClick={() => onToggle()}
     >
       <div
-        className={`${genericHamburgerLine} ${
+        className={`${base} ${
           isOpen
             ? "rotate-45 translate-y-3 opacity-50 group-hover:opacity-100"
             : "opacity-50 group-hover:opacity-100"
         }`}
       />
       <div
-        className={`${genericHamburgerLine} ${
+        className={`${base} ${
           isOpen ? "opacity-0" : "opacity-50 group-hover:opacity-100"
         }`}
       />
       <div
-        className={`${genericHamburgerLine} ${
+        className={`${base} ${
           isOpen
             ? "-rotate-45 -translate-y-3 opacity-50 group-hover:opacity-100"
             : "opacity-50 group-hover:opacity-100"
